@@ -20,20 +20,22 @@ const MultiStepForm = (props) => {
 
   console.log(props);
   return (
-    <div className="text-left">
+    <div className="form-parent">
       {props.list[props.step - 1].items?.map((item, index) => {
         return (
-          <div className="form__inputs">
-            <FormItem
-              key={item.label}
-              item={item}
-              onChange={updateAnswers}
-              answer={
-                props.pagesAnswers[props.step]
-                  ? props.pagesAnswers[props.step][item.value]
-                  : null
-              }
-            />
+          <div className="">
+            <div className="form__inputs">
+              <FormItem
+                key={item.label}
+                item={item}
+                onChange={updateAnswers}
+                answer={
+                  props.pagesAnswers[props.step]
+                    ? props.pagesAnswers[props.step][item.value]
+                    : null
+                }
+              />
+            </div>
           </div>
         );
       })}

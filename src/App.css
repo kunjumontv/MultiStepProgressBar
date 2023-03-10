@@ -2,12 +2,9 @@
   margin: 15px;
 }
 
-.text-left {
-  text-align: left;
-  display: inline-flex;
-  flex-direction: column;
-  width: 498px;
-  flex-wrap: wrap;
+
+.form-parent{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
-
-
